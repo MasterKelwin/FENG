@@ -2,12 +2,14 @@ import { Component } from "@angular/core";
 
 
 @Component({
-    selector: 'app-newFan',
-    templateUrl: './newFan.component.html',
-    styleUrls: ['./newFan.component.scss']
+  selector: 'app-newFan',
+  templateUrl: './newFan.component.html',
+  styleUrls: ['./newFan.component.scss']
 
 })
 
-export class NewFanComponent{
-
+export class NewFanComponent {
+  register() {
+    console.log('registered')
+  }
 }

@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { NewFanComponent } from '../app/newFan/newFan.component'
 import { AppComponent } from './app.component';
@@ -9,7 +10,8 @@ import { AppComponent } from './app.component';
     NewFanComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
