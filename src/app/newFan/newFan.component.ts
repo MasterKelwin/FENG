@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, EventEmitter, Output } from "@angular/core";
 
 
 @Component({
@@ -7,17 +7,27 @@ import { Component } from "@angular/core";
   styleUrls: ['./newFan.component.scss']
 })
 
+
+
 export class NewFanComponent {
 
-  name: string = '';
-  age: number | undefined;
-  team: string = '';
+  @Output() atRegister = new EventEmitter<any>();
 
+  name: string | undefined;
+  age: number | undefined;
+  team: string | undefined;
 
   register() {
-    console.log('registered');
-    console.log(`Nome: ${this.name}`);
-    console.log(`Time: ${this.team}`);
-    console.log(`Idade: ${this.age}`);
+    this.atRegister.emit({
+      name: this.name, age: this.age, team: this.team
+    });
+    this.cleanFields()
   }
-}
+
+  cleanFields() {
+    this.name = '';
+    this.age = undefined;
+    this.team = '';
+  }
+
+ }
