@@ -7,10 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'FENG';
-  userData: any = {};
+  userData: any = [];
 
   register($event: any) {
-    console.log($event)
-    this.userData = $event;
+    console.log($event);
+    const register = {...$event, date: new Date()};
+    this.userData.push(register);
   }
 }

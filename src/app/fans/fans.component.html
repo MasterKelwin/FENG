@@ -1,0 +1,23 @@
+<h2 class="title">Fans</h2>
+
+<table class="table">
+    <thead class="table__header">
+        <th class="table__header__content">Nome</th>
+        <th class="table__header__content">Idade</th>
+        <th class="table__header__content">Time</th>
+        <th class="table__header__content">Data</th>
+    </thead>
+    <tbody *ngFor="let fan of userData">
+        <tr class="table__trace">
+            <td class="table__content">{{ fan.name }}</td>
+            <td class="table__content">{{ fan.age }}</td>
+            <td class="table__content">{{ fan.team }}</td>
+            <td class="table__content">{{ fan.date | date:'short' }}</td>
+        </tr>
+    </tbody>
+</table>
+
+
+
+
+

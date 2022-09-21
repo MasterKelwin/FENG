@@ -1,0 +1,40 @@
+.title {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+    color: var(--primary);
+}
+
+.table {
+    text-align: center;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0 0 8px var(--Black);
+    min-width: 397px;
+    border-radius: 6px;
+
+    &__header {
+        color: var(--primary);
+
+        &__content {
+            padding: 10px;
+            border-bottom: 2px solid var(--secondary);
+        }
+    }
+
+    &__trace {
+        margin-bottom: 10px;
+        border-radius: 4px;
+
+        &:last-child {
+            .table__content {
+                border-bottom: none;
+            }
+        }
+    }
+
+    &__content {
+        padding: 10px;
+        border-bottom: 1px solid var(--cinza-claro);
+    }
+}
