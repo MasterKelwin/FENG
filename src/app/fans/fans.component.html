@@ -1,3 +1,11 @@
-<p>Nome: {{ userData.name }}</p>
-<p>Idade: {{ userData.age }}</p>
-<p>Time: {{ userData.team }}</p>
+
+
+<div *ngFor="let fan of userData">
+    <p>Nome: {{ fan.name }}</p>
+    <p>Idade: {{ fan.age }}</p>
+    <p>Time: {{ fan.team }}</p>
+    <p>Data: {{ fan.date }}</p>
+</div>
+
+
+

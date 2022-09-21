@@ -7,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class FansComponent implements OnInit {
 
-  @Input() userData: any;
+  @Input() userData: any[] = [];
 
   constructor() { }
 
