@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'FENG';
+  userData: any = {};
+
+  register($event: any) {
+    console.log($event)
+    this.userData = $event;
+  }
 }
