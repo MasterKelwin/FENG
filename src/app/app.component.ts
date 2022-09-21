@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FanRegisterService } from './services/fan-register.service';
 
 @Component({
   selector: 'app-root',
@@ -7,11 +8,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'FENG';
-  userData: any = [];
+
+  constructor(private service: FanRegisterService) {
+
+  }
 
   register($event: any) {
     console.log($event);
-    const register = {...$event, date: new Date()};
-    this.userData.push(register);
+    this.service.add($event);
+
   }
 }
