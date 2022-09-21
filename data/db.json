@@ -1,0 +1,25 @@
+{
+  "fans": [
+    {
+      "id": 1,
+      "name": "Karlos",
+      "age": 16,
+      "team": "Flamengo",
+      "data": "2020-11-04T16:30:10.710Z"
+    },
+    {
+      "id": 2,
+      "name": "Karla",
+      "age": 21,
+      "team": "Santos",
+      "data": "2020-11-04T21:24:10.710Z"
+    },
+    {
+      "id": 3,
+      "name": "Kleiton",
+      "age": 24,
+      "team": "Vasco",
+      "data": "2020-11-05T21:14:10.710Z"
+    }
+  ]
+}

@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http'
 
 @Injectable({
   providedIn: 'root'
@@ -6,8 +7,14 @@ import { Injectable } from '@angular/core';
 export class FanRegisterService {
 
   private userData: any[];
-  constructor() {
+  private url = 'http://localhost:3000/fans';
+
+  constructor(private httpClient: HttpClient) {
     this.userData = [];
+   }
+
+   catchData() {
+    return this.httpClient.get(this.url);
    }
 
    get data(){
@@ -17,6 +24,7 @@ export class FanRegisterService {
    add(register: any) {
     register = {...register, date: new Date()};
     this.userData.push(register);
+    return this.httpClient.post(this.url, register)
    }
 
 

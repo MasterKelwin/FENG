@@ -1,4 +1,5 @@
 import { NgModule, LOCALE_ID, DEFAULT_CURRENCY_CODE } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http'
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { NewFanComponent } from '../app/newFan/newFan.component'
@@ -17,10 +18,11 @@ registerLocaleData(localePt, 'pt');
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [
-    {provide: LOCALE_ID, useValue: 'pt'}, 
+    {provide: LOCALE_ID, useValue: 'pt'},
     {
       provide: DEFAULT_CURRENCY_CODE,
       useValue: 'BRL'

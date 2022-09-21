@@ -14,6 +14,11 @@ export class FansComponent implements OnInit {
 
   ngOnInit(): void {
     this.userData = this.service.data;
+    this.service.catchData().subscribe((Data: any) => {
+      console.log(Data);
+      this.userData = Data;
+    })
+
   }
 
 }
