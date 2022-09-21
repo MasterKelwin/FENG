@@ -24,7 +24,6 @@ export class FanRegisterService {
    add(register: any) {
     register = {...register, date: new Date()};
     this.userData.push(register);
-    return this.httpClient.post(this.url, register)
    }
 
 
