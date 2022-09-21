@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { FanRegisterService } from '../services/fan-register.service';
 
 @Component({
   selector: 'app-fans',
@@ -7,11 +8,12 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class FansComponent implements OnInit {
 
-  @Input() userData: any[] = [];
+  userData: any[] = [];
 
-  constructor() { }
+  constructor(private service: FanRegisterService) { }
 
   ngOnInit(): void {
+    this.userData = this.service.data;
   }
 
 }
