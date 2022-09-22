@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Output } from "@angular/core";
-
+import { Fan } from "../models/fans.model";
+import { FanRegisterService } from "../services/fan-register.service";
 
 @Component({
   selector: 'app-newFan',
@@ -7,22 +8,23 @@ import { Component, EventEmitter, Output } from "@angular/core";
   styleUrls: ['./newFan.component.scss']
 })
 
-
-
 export class NewFanComponent {
 
-  @Output() atRegister = new EventEmitter<any>();
+  @Output() atRegister = new EventEmitter<Fan>();
 
   name: string | undefined;
   age: number | undefined;
   team: string | undefined;
 
+  constructor(private service: FanRegisterService) {  }
+
   register() {
-    this.atRegister.emit({
-      name: this.name, age: this.age, team: this.team
-    });
-    this.cleanFields()
-  }
+        const fan: Fan = { name: this.name, age:this.age, team: this.team };
+    this.service.add(fan).subscribe(result => {
+      console.log(result);
+      this.cleanFields()
+    }, (error) => console.log(error));
+  };
 
   cleanFields() {
     this.name = '';

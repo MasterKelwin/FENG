@@ -13,7 +13,7 @@ export class FansComponent implements OnInit {
   constructor(private service: FanRegisterService) { }
 
   ngOnInit(): void {
-    this.userData = this.service.data;
+    // this.userData = this.service.data;
     this.service.catchData().subscribe((Data: any) => {
       console.table(Data);
       this.userData = Data;

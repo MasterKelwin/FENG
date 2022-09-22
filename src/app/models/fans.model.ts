@@ -1,7 +1,7 @@
-export interface fans {
+export interface Fan {
   id?: number;
-  name: string;
-  age: number;
-  team: string;
-  date?: number;
+  name: string | undefined;
+  age: number | undefined;
+  team: string | undefined;
+  date?: object;
 }
