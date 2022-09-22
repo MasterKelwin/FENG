@@ -1,12 +1,14 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http'
+import { HttpClient } from '@angular/common/http';
+import { Fan } from '../models/fans.model'
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class FanRegisterService {
 
-  private userData: any[];
+  private userData: Fan[];
   private url = 'http://localhost:3000/fans';
 
   constructor(private httpClient: HttpClient) {
@@ -21,10 +23,11 @@ export class FanRegisterService {
     return this.userData;
    }
 
-   add(register: any) {
+   add(register: Fan): Observable<Fan> {
     register = {...register, date: new Date()};
     this.userData.push(register);
+
+    //
+    return this.httpClient.post<Fan>(this.url, register)
    }
-
-
 }

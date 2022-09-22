@@ -14,8 +14,6 @@ export class AppComponent {
   }
 
   register($event: any) {
-    console.log($event);
     this.service.add($event);
-
   }
 }
