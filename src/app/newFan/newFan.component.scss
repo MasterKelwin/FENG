@@ -1,5 +1,17 @@
+.title {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+  color: var(--primary);
+  font-weight: bold;
+}
+
+section {
+  padding: 0;
+}
+
 .form {
-  background-color: var(--White);
+  background-color: #fff;
   padding: var(--padding);
   border-radius: 4px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);

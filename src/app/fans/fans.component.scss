@@ -3,13 +3,14 @@
     font-size: 1.5rem;
     margin-bottom: 16px;
     color: var(--primary);
+    font-weight: bold;
 }
 
 .table {
     text-align: center;
     margin: 0 auto;
     background-color: #fff;
-    box-shadow: 0 0 8px var(--Black);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
     min-width: 397px;
     border-radius: 6px;
 

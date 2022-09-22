@@ -7,7 +7,7 @@ import { NewFanComponent } from "./newFan/newFan.component";
 export const routes: Routes = [
   { path: '', redirectTo: 'Fans List', pathMatch: 'full' },
   { path: 'Fans List', component: FansComponent },
-  { path: 'New Fans', component: NewFanComponent }
+  { path: 'New Fan', component: NewFanComponent }
 ];
 
 @NgModule ({
@@ -15,6 +15,4 @@ export const routes: Routes = [
     exports: [RouterModule]
 })
 
-export class AppRoutingModule{
-
-}
+export class AppRoutingModule{};

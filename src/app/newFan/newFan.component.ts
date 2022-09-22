@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Output } from "@angular/core";
 import { Fan } from "../models/fans.model";
 import { FanRegisterService } from "../services/fan-register.service";
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-newFan',
@@ -16,13 +17,15 @@ export class NewFanComponent {
   age: number | undefined;
   team: string | undefined;
 
-  constructor(private service: FanRegisterService) {  }
+  constructor(private service: FanRegisterService, private router: Router) { }
 
   register() {
-        const fan: Fan = { name: this.name, age:this.age, team: this.team };
+    const fan: Fan = { name: this.name, age: this.age, team: this.team };
     this.service.add(fan).subscribe(result => {
       console.log(result);
-      this.cleanFields()
+      this.cleanFields();
+      this.router.navigateByUrl('Fans List');
+
     }, (error) => console.log(error));
   };
 
@@ -32,4 +35,4 @@ export class NewFanComponent {
     this.team = '';
   }
 
- }
+}
