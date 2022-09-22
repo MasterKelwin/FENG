@@ -1,27 +1,23 @@
-<h2 class="title">Fans</h2>
-
-<table class="table" *ngIf="userData.length > 0; else zeroFans">
+<section>
+  <h2 class="title">Fans</h2>
+  <table class="table" *ngIf="userData.length > 0; else zeroFans">
     <thead class="table__header">
-        <th class="table__header__content">Nome</th>
-        <th class="table__header__content">Idade</th>
-        <th class="table__header__content">Time</th>
-        <th class="table__header__content">Data</th>
+      <th class="table__header__content">Nome</th>
+      <th class="table__header__content">Idade</th>
+      <th class="table__header__content">Time</th>
+      <th class="table__header__content">Data</th>
     </thead>
     <tbody>
-        <tr class="table__trace" *ngFor="let fan of userData">
-            <td class="table__content">{{ fan.name }}</td>
-            <td class="table__content">{{ fan.age }}</td>
-            <td class="table__content">{{ fan.team }}</td>
-            <td class="table__content">{{ fan.date | date:'short' }}</td>
-        </tr>
+      <tr class="table__trace" *ngFor="let fan of userData">
+        <td class="table__content">{{ fan.name }}</td>
+        <td class="table__content">{{ fan.age }}</td>
+        <td class="table__content">{{ fan.team }}</td>
+        <td class="table__content">{{ fan.date | date:'short' }}</td>
+      </tr>
     </tbody>
-</table>
+  </table>
+</section>
 
 <ng-template #zeroFans>
-    <p>Nenhum torcedor cadastrado</p>
+  <p>Nenhum torcedor cadastrado</p>
 </ng-template>
-
-
-
-
-
