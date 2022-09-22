@@ -1,27 +1,15 @@
 # FENG
+##A space for footbal fans registration (just for studies in Angular)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.3.
+I made this to learn more Angular and pratice my english.
 
-## Development server
+### Functionalities
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+1- Components rendering data with ngFor and ngIf.  
+2- Prevent default with ngForm.  
+3- Rendering and filtering date from output and pipes.  
+4- userData with decorator @input.  
+5- I file to leave the responsibilities, the fan-register.ts .  
+6- Rendering from the /data and catching a json server like a rest API  
+7- Router module to make SPA.  
+8- Routing components with routerLink and routerActive.  
